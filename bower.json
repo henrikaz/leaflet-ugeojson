@@ -1,0 +1,27 @@
+{
+  "name": "leaflet-ugeojson",
+  "description": "A leaflet plugin that updates a geojson layer each time the user move the map",
+  "main": [
+    "src/leaflet.uGeoJSON.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vytautas-k/leaflet-ugeojson.git"
+  },
+  "keywords": [
+    "leaflet",
+    "geojson"
+  ],
+  "authors": [
+    "Benjamin VADANT"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
