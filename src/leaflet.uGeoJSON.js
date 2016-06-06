@@ -45,6 +45,8 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
       console.debug("load Data");
     }
 
+    this.fire('data:load');
+
     while (this._requests.length > this.options.maxRequests) {
       this._requests.shift().abort();
     }
@@ -71,6 +73,7 @@ L.UGeoJSONLayer = L.GeoJSON.extend({
     var request = new XMLHttpRequest();
 
     request.open("POST", this.options.endpoint, true);
+    request.setRequestHeader("Accept", "application/json");
     request.onload = function () {
       for (var i in self._requests) {
         if (self._requests[i] === request) {
